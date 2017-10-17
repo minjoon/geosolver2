@@ -1,6 +1,6 @@
 import functools
 import algopy
-# import pyipopt
+import pyipopt
 from scipy.optimize import minimize, newton_krylov, basinhopping
 import numpy as np
 from scipy.optimize.nonlin import NoConvergence

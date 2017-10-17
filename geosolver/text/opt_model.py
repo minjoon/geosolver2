@@ -30,21 +30,21 @@ class TextGreedyOptModel(GreedyOptModel):
         curr_score = self.objective_function(selected)
         next_tree, next_score = self.get_next_tree(selected, remaining)
         if next_tree is None:
-            print "No legal next available."
+            #print "No legal next available."
             return set()
         while next_score - curr_score > threshold:
-            print "%.2f, %r" % (next_score, next_tree)
+            #print "%.2f, %r" % (next_score, next_tree)
             curr_score = next_score
             selected.add(next_tree)
             remaining.discard(next_tree)
             next_tree, next_score = self.get_next_tree(selected, remaining)
             if next_tree is None:
-                print "No legal next available."
+                #print "No legal next available."
                 break
             next_score = self.objective_function(selected.union([next_tree]))
             if len(selected) > 100:
                 raise Exception()
-        print ""
+        #print ""
         return selected
 
     def objective_function(self, semantic_trees, cc_trees=set()):

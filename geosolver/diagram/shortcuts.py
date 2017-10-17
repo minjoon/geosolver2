@@ -11,7 +11,7 @@ __author__ = 'minjoon'
 
 def question_to_graph_parse(question):
     diagram = open_image(question.diagram_path)
-    image_segment_parse = parse_image_segments(diagram)
+    image_segment_parse = parse_image_segments(diagram) 
     primitive_parse = parse_primitives(image_segment_parse)
     selected_primitive_parse = select_primitives(primitive_parse)
     core_parse = parse_core(selected_primitive_parse)

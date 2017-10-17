@@ -252,5 +252,5 @@ def _ground_variable(match_parse, variable, references={}):
         arcs = get_all_instances(graph_parse, 'arc', True)
         return SetNode(lines.values() + arcs.values())
 
-    logging.error("failed to ground variable: %r" % variable)
+    #logging.error("failed to ground variable: %r" % variable)
     return variable
