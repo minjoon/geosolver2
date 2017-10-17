@@ -20,7 +20,6 @@ def parse_match_formulas(match_parse):
                 continue
 
             # FIXME : to be obtained by tag model
-
             left_term = prefix_to_formula(expression_parser.parse_prefix(label))
 
             """

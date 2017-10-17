@@ -23,7 +23,6 @@ def parse_graph(core_parse):
             circle_variable = circle_dict[center_key][radius_key]['variable']
             points = circle_dict[center_key][radius_key]['points']
             arc_graphs[(center_key, radius_key)] = _get_arc_graph(core_parse, circle, circle_variable, points)
-
     graph_parse = GraphParse(core_parse, line_graph, circle_dict, arc_graphs)
     return graph_parse
 
@@ -83,6 +82,7 @@ def _get_line_graph(core_parse):
                 point = core_parse.intersection_points[key]
                 if distance_between_line_and_point(line, point) <= eps:
                     points[key] = point
+            # this line can throw an error: "failed to ground variable"
             line_graph.add_edge(key0, key1, instance=line, points=points, variable=var)
     return line_graph
 

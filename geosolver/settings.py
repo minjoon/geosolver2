@@ -6,5 +6,5 @@ Instead, place parameters in paramters.py
 __author__ = 'minjoon'
 
 
-STANFORD_PARSER_SERVER_URL = "http://localhost:9000/dep"
-GEOSERVER_URL = "http://localhost:8000"
+STANFORD_PARSER_SERVER_URL = "http://10.12.40.227:9000/dep"
+GEOSERVER_URL = "http://10.12.40.227:8000/"
